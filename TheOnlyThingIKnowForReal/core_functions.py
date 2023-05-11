@@ -13,7 +13,6 @@ def fancy_spin(self, distance):
     self.center_of_rotation_y = distance[1]
     self.x = self.center_of_rotation_x + self.radius * math.cos(self.angle)  # Starting position x
     self.y = self.center_of_rotation_y - self.radius * math.sin(self.angle)  # Starting position y
-        
     
 
    # def display(self, scroll):
