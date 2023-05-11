@@ -29,9 +29,9 @@ class Events(object):
             self.event_dict['move_left'] = True
         if self.event.key == K_d:
             self.event_dict['move_right'] = True
-        if self.event.type == K_LSHIFT:
+        if self.event.key == K_LSHIFT:
             self.event_dict['dash'] = True
-        if self.event.type == K_s:
+        if self.event.key == K_s:
             pass
 
 
@@ -44,6 +44,6 @@ class Events(object):
             self.event_dict['jump'] = False
         if self.event.type ==K_RIGHT:
             self.event_dict['shoot'] = False
-        if self.event.type == K_LSHIFT:
+        if self.event.key == K_LSHIFT:
             self.event_dict['dash'] = False
         

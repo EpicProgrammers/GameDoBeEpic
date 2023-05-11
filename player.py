@@ -66,13 +66,13 @@ class Player(object):
 
 
     def dash(self):
-        if self.event_dict['dash']: #and self.dash_cooldown == 120 and self.dash_duration > 0:
+        if self.event_dict['dash'] and self.dash_cooldown >= 120: # and self.dash_duration > 0:
             if self.facing_left:
-                self.movement[0] -= 10
-                self.dash_cooldown = 120
-            if self.facing_right:
-                self.movement[0] += 10
-                self.dash_cooldown = 120
+                self.movement[0] -= 30
+                self.dash_cooldown = 0
+            if self.facing_right and self.dash_cooldown >= 120:
+                self.movement[0] += 30
+                self.dash_cooldown = 0
         if self.dash_cooldown < 120:
             self.dash_cooldown += 1
         if self.dash_duration > 0:
